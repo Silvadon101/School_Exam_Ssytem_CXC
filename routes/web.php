@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\SubjectChoiceController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +22,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::resource('student','StudentsController');
+// ?------------Single Resource routing-----------
+// Route::resource('student',StudentsController::class);
+
+// ?-----------Multiple Resource routing------------
+Route::resources([
+    'student' => StudentsController::class,
+    'subject' => SubjectController::class,
+    'subjectchoice' => SubjectChoiceController::class,
+    'transaction' => TransactionController::class,
+    'payment' => PaymentController::class
+]);

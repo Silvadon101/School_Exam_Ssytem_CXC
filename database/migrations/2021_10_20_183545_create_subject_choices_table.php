@@ -15,6 +15,14 @@ class CreateSubjectChoicesTable extends Migration
     {
         Schema::create('subject_choices', function (Blueprint $table) {
             $table->id();
+            $table->integer('subchoice_id');
+            $table->foreignId('student_id')
+                  ->constrained('students')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
+            $table->foreignId('subject_id')
+                  ->constrained('subjects');
+            $table->mediumText('approved');
             $table->timestamps();
         });
     }

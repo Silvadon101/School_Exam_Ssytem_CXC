@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Subjects extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'subject_id',
+        'subject_name',
+        'cost_amount'
+    ];
 }

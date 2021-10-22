@@ -1,5 +1,6 @@
 module.exports = {
   purge: [
+    require('@tailwindcss/custom-forms'),
     './resources/**/*.blade.php',
     './resources/**/*.js',
     './resources/**/*.vue',

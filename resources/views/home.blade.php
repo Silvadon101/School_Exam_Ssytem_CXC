@@ -10,6 +10,10 @@
 
 </head>
 <body>
+    {{-- ------navbar------ --}}
+    @include('layouts.includes.nav')
+
+    
     <div class="flex justify-center">
         <h1 class="text-red-800 text-7xl">Welcome</h1>
     </div>

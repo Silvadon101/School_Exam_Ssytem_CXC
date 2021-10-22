@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Students;
 
 class StudentsController extends Controller
 {
@@ -13,7 +14,7 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('pages.student.index');
     }
 
     /**
@@ -23,7 +24,7 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.student.create');
     }
 
     /**
@@ -34,7 +35,18 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Students;
+        $data->student_id = $request->student_id; 
+        $data->first_name = $request->fname;
+        $data->last_name = $request->lname;
+        $data->DOB = $request->dob;
+        $data->gender = $request->gender;
+        $data->class = $request->class;
+        $data->phone_number = $request->cell;
+        $data->email = $request->email;
+        $data->save();
+
+        return redirect()->back->with('success','Student Added Successfully!');
     }
 
     /**

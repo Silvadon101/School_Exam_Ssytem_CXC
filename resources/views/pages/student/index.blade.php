@@ -7,6 +7,7 @@
     </button>
 </div>
 
+{{----------------- Students Info Table ---------------------}}
 <section class="container mx-auto p-6 font-mono">
     <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
       <div class="w-full overflow-x-auto">
@@ -64,3 +65,20 @@
       </div>
     </div>
   </section>
+{{--------X---------- Students Info Table ----------X-----------}}
+
+{{--------------Students Info Table Pagination-------------}}
+
+<div class="flex justify-center">
+    <button
+        class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+        {!! $student->links() !!}
+    </button>
+{{--
+    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+        Next
+    </button>
+--}}
+</div>
+
+{{-------X-------Students Info Table Pagination-------X------}}

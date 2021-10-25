@@ -14,7 +14,7 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        $student = Students::all();
+        $student = Students::paginate(1);
         return view('pages.student.index',['student'=>$student]);
     }
 
@@ -58,7 +58,7 @@ class StudentsController extends Controller
      */
     public function show()
     {
-        $student = Students::all();
+        $student = Students::paginate(1);
         return view('pages.student.index',['student'=>$student]);
     }
 

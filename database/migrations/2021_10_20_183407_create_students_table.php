@@ -18,11 +18,11 @@ class CreateStudentsTable extends Migration
             $table->integer('student_id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->mediumText('DOB');
+            $table->Text('DOB');
             $table->string('gender');
-            $table->mediumText('class');
-            $table->mediumInteger('phone_number');
-            $table->mediumText('email');
+            $table->Text('class');
+            $table->Integer('phone_number');
+            $table->Text('email');
             $table->timestamps();
         });
     }

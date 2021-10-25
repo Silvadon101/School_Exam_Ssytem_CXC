@@ -14,7 +14,8 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        return view('pages.student.index');
+        $student = Students::all();
+        return view('pages.student.index',['student'=>$student]);
     }
 
     /**
@@ -35,18 +36,18 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Students;
-        $data->student_id = $request->student_id; 
-        $data->first_name = $request->fname;
-        $data->last_name = $request->lname;
-        $data->DOB = $request->dob;
-        $data->gender = $request->gender;
-        $data->class = $request->class;
-        $data->phone_number = $request->cell;
-        $data->email = $request->email;
+        $data = new Students();
+        $data->student_id = $request->input('student_id');
+        $data->first_name = $request->input('fname');
+        $data->last_name = $request->input('lname');
+        $data->DOB = $request->input('dob');
+        $data->gender = $request->input('gender');
+        $data->class = $request->input('class');
+        $data->phone_number = $request->input('cell');
+        $data->email = $request->input('email');
         $data->save();
 
-        return redirect()->back->with('success','Student Added Successfully!');
+        return back()->with('success','Student Added Successfully!');
     }
 
     /**
@@ -55,9 +56,10 @@ class StudentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $student = Students::all();
+        return view('pages.student.index',['student'=>$student]);
     }
 
     /**

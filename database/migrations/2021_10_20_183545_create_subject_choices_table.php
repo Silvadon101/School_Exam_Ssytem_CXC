@@ -22,7 +22,7 @@ class CreateSubjectChoicesTable extends Migration
                   ->onUpdate('cascade');
             $table->foreignId('subject_id')
                   ->constrained('subjects');
-            $table->mediumText('approved');
+            $table->Text('approved');
             $table->timestamps();
         });
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\SubjectChoiceController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,6 @@ Route::resources([
     'transaction' => TransactionController::class,
     'payment' => PaymentController::class
 ]);
+
+// ?-----------Helper Test----------------
+Route::get('split',[TestController::class,'getLastName']);

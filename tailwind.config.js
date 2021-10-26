@@ -7,10 +7,17 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+      pagination: theme => ({
+          color: theme('colors.green.600'),
+      }),
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+    plugins: [
+        require('tailwindcss-plugins/pagination'),({
+            color: colors['green-dark'],
+        }),
+    ],
 }

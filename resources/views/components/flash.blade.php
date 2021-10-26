@@ -22,3 +22,11 @@
         </div>
     </div>
 </div>
+
+{{--
+| ------------------------------------------------------------
+| Note: The 'attribute->merge' is used to merge data from this blade with data from outside
+|       In this case "class" can be combined with other classes outside of this blade componenet
+|       when called upon!
+| ------------------------------------------------------------
+--}}

@@ -1,11 +1,11 @@
 {{-- ------navbar------ --}}
 @include('layouts.includes.nav')
 
-<div class="ml-12 mt-12">
-    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+{{---------Add btn----------}}
+    <x-add_btn>
         <a href="student/create"> Add Student </a>
-    </button>
-</div>
+    </x-add_btn>
+{{----X-----Add btn----X------}}
 
 {{----------------- Students Info Table ---------------------}}
 <section class="container mx-auto p-6 font-mono">
@@ -68,17 +68,21 @@
 {{--------X---------- Students Info Table ----------X-----------}}
 
 {{--------------Students Info Table Pagination-------------}}
+<span >{!! $student->links() !!}</span>
 
+{{--
 <div class="flex justify-center">
     <button
         class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
-        <span >{!! $student->links() !!}</span>
     </button>
+    --}}
 {{--
-    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
-        Next
-    </button>
---}}
+        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+            Next
+        </button>
+    --}}{{--
+
 </div>
+--}}
 
 {{-------X-------Students Info Table Pagination-------X------}}

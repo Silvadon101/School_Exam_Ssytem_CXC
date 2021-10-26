@@ -1,14 +1,14 @@
 {{-- ------navbar------ --}}
 @include('layouts.includes.nav')
 
-<div class="flex justify-center mt-20">
-  @if(Session('success'))
+@if(Session('success'))
+    <div class="flex justify-center mt-6">
       <x-flash type="success">
           <x-flash_msg_t>Success!</x-flash_msg_t>
           <x-flash_msg_b>{{ Session('success') }}</x-flash_msg_b>
       </x-flash>
-  @endif
 </div>
+@endif
 <div class="flex justify-center mt-20">
 <form class="w-full max-w-sm pb-12" action="{{ url('student') }}"  method="POST">
     @csrf

@@ -12,10 +12,23 @@ class StudentsDisplay extends Component
 
     public function mount()
     {
+        // ------Displaying students in alphabetical order via last name------
         $student = Students::orderBy('last_name')->get();
 
         $this->student = $student;
-        // return view('pages.student.index',['student'=>$student]);
+    }
+
+    public function del($studentID)
+    {
+        // -----searching student----
+        $student = Students::find($studentID);
+
+        // ------deleting from DB------
+        $student->delete();
+
+        // --------deleting from collection------
+        $this->student = $this->student->except($studentID);
+
     }
 
     public function render()

@@ -53,13 +53,14 @@
               <td class="px-4 py-3 text-sm border">{{ $students->phone_number }}</td>
               <td class="px-4 py-3 text-sm border">{{ $students->email }}</td>
               <td class="px-4 py-3 text-sm border">
+                <div class="flex justify-between">
                   <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                       <a href="#">Edit</a>
                   </button>
                   <button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
                       <a wire:click="del({{ $students->id }})">Delete</a>
                   </button>
-
+                  </div>
               </td>
             </tr>
             @endforeach

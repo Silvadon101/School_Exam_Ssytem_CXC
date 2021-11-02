@@ -8,7 +8,7 @@
 </head>
 <body>
   
-  <livewire:students-display />
+  <livewire:student.students-display />
 
   @livewireScripts
 </body>

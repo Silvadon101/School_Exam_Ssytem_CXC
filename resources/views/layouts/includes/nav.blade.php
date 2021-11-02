@@ -24,16 +24,16 @@
         </div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div class="text-sm lg:flex-grow">
-            <a href="student" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white mr-4">
+            <a href="{{ url('student') }}" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white mr-4">
               Students
             </a>
-            <a href="subject" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white mr-4">
+            <a href="{{ url('subject') }}" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white mr-4">
               Subjects
             </a>
-            <a href="subjectchoice" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white mr-4">
+            <a href="{{ url('subjectchoice') }}" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white mr-4">
               Subject Choices
             </a>
-            <a href="payment" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white">
+            <a href="{{ url('payment') }}" class="block mt-4 lg:inline-block lg:mt-0 text-green-200 hover:text-white">
               Payments
             </a>
           </div>

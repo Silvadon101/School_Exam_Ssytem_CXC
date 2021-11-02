@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Subjects;
 
 class SubjectController extends Controller
 {
@@ -13,7 +14,7 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.student.subject');
     }
 
     /**
@@ -23,7 +24,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.student.subject-create');
     }
 
     /**
@@ -34,7 +35,15 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $createdSubject = new Subjects;
+        $createdSubject->subject_id = $request->subjectID;
+        $createdSubject->subject_name = $request->subjectName;
+        $createdSubject->cost_amount = $request->cost;
+        $createdSubject->save();
+
+        return back()->with('success','Subject Added Successfully!');
+
+
     }
 
     /**
